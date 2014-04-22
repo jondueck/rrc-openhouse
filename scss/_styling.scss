@@ -1,0 +1,91 @@
+/*=========================
+	Styling
+  =========================*/
+	
+
+body {
+	border: 1em solid $black;
+	background: $grey
+}
+
+::selection {
+	background: #e5e5e5;
+}
+
+.students {
+	.student {
+		img {
+			width:  100%;
+			height: auto;
+			border-radius: 50%;
+			-webkit-filter: grayscale(100%);
+			transition-duration: 0.5s;
+		}
+		img:hover {
+			-webkit-filter: grayscale(0%);
+		}
+	}
+	.web-major img{
+		border: 0.325em solid $red;
+		box-sizing: border-box;
+	}
+	.threed-major img{
+		border: 0.325em solid $green;
+		box-sizing: border-box;
+	}
+	.video-major img{
+		border: 0.325em solid $blue;
+		box-sizing: border-box;
+	}
+}
+
+header{
+	.video-major{
+		border-color: $blue;
+	}
+	.web-major{
+		border-color: $red;
+		text-align: center;
+	}
+	.threed-major{
+		border-color: $green;
+		text-align: right;
+	}
+}
+
+body.video-major, body.web-major, body.threed-major {
+	div { color: $black; border-color: $black;}
+}
+
+body.video-major {
+	border-color: $blue;
+	header {
+		.video-major{
+			color: $blue;
+			opacity: 1;
+			border-color: $blue;
+		}
+	}
+}
+
+body.web-major {
+	border-color: $red;
+	header {
+		.web-major{
+			color: $red;
+			opacity: 1;
+			border-color: $red;
+		}
+	}
+}
+
+body.threed-major {
+	border-color: $green;
+	header {
+		.threed-major{
+			color: $green;
+			opacity: 1;
+			border-color: $green;
+		}
+	}
+}
